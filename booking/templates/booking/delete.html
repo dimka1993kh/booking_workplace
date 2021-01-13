@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Удаление брони{% endblock %}
+
+{% block content %}
+        <h1>Удаление статьи</h1>  
+        <form method='post'>
+            {% csrf_token %}
+            <button type="submit">Удалить бронь</button> 
+        </form>
+{% endblock %}

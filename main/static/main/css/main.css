@@ -1,0 +1,111 @@
+body {
+    background: #bbdeec;
+    display: flex;
+}
+
+aside {
+    background: #a1dbf1;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: rgb(0, 0, 0);
+    border-right: 5px solid #4d4d4d;
+    float: left;
+}
+
+aside ul {
+    list-style: none
+}
+aside ul a {
+    color: rgb(0, 0, 0);
+    display: block;
+    margin-top: 20px;
+
+}
+
+aside ul a:hover {
+    color: red;
+    text-decoration: none;
+    transform: scale(1.05);
+    transition: transform .6s ease;
+}
+
+main {
+    max-width: 100%;
+}
+
+main h1 {
+    text-align: center;
+    color: black;
+}
+
+main p {
+    margin-left: 20px;
+}
+main button {
+    margin: 0 50%;
+}
+
+.workplace {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin: 10px; 
+    border: 1px solid black;
+    overflow: hidden;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+.workplace img {
+    display: inline;
+}
+
+.workplace:hover {
+    color: red;
+    text-decoration: none;
+    transform: scale(1.05);
+    transition: transform .6s ease;
+}
+
+.booking_button {
+    border: black solid 1px;
+    background: #a1dbf1;
+    height: 20px;
+    width: 150px;
+    display: inline-block;
+    /* margin: 0 30% 0 30%; */
+    text-align: center;
+    margin: 0 20px;
+}
+
+.booking_button a {
+    color: black;
+    text-decoration: none;
+}
+
+.booking_button:hover, .time:hover {
+    color: red;
+    text-decoration: none;
+    transform: scale(1.05);
+    transition: transform .6s ease;
+}
+
+.time {
+    float:left;
+    border: black solid 1px;
+    /* background: red; */
+    width: 85px;
+    margin: 10px;
+}
+
+.table {
+    display: flex;
+}
+
+.button_area {
+    display: flex;
+    margin:0 25% 0 25%;
+}
+

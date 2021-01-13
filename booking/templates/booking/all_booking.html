@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Все бронирования{% endblock %}
+
+{% block content %}
+    <h1>Все бронирования</h1>
+    {% for el in table %}
+        <div class='table'>
+            <p class='cell'>Пользователь: {{el.user}}</p>
+            <p class='cell'>Рабочее место №{{el.workplace}}</p>
+            <p class='cell'>Начало работы в {{el.datetime_from}} часов</p>
+            <p class='cell'>Окончание работы в {{el.datetime_to}} часов</p>
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Бронирование{% endblock %}
+
+{% block content %}
+    <h1>Выберете нужное рабочее место</h1>
+    {% for workplace in workplaces %}
+        <a class='workplace' href='{% url "workplace" workplace.number %}'>
+            <img src="{% static 'main/image/workstation.png' %}" alt='workplace'>
+            <p>Рабочее место №{{workplace.number}}</p>      
+        </a>
+    {% endfor %}
+{% endblock %}
+
+
+
+

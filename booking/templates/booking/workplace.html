@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load time_booking %} 
+
+{% block title %}Рабочее место №{{id}}{% endblock %}
+
+{% block content %}
+    <h1>Рабочее место №{{id}}</h1>
+    <form method='post'>
+        {% csrf_token %}
+        {%  for el in form %}
+            {{ el }} <br>
+        {% endfor %}
+        <span>{{error}}</span>
+        <button type="submit">Забронировать</button> 
+
+        {% find_out_free_time table id %}
+{% endblock %}

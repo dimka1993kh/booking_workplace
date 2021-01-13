@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Окончание бронирования{% endblock %}
+
+{% block content %}
+    <h1>Вы забронировали место!</h1>
+    <h1>Ваши забронированные места</h1>
+    {% for el in table %}
+        {% if el.user == user.username %}
+            <div class='table'>
+                <p class='cell'>Пользователь: {{el.user}}</p>
+                <p class='cell'>Рабочее место №{{el.workplace}}</p>
+                <p class='cell'>Начало работы в {{el.datetime_from}} часов</p>
+                <p class='cell'>Окончание работы в {{el.datetime_to}} часов</p>
+                <div class='booking_button'>
+                    <a href="{% url 'delete' el.id%}">Удалить бронь</a>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+    <div class='button_area'>
+        <div class='booking_button'>
+            <a href="{% url 'booking' %}">Новая бронь</a>
+        </div>
+
+    </div>
+{% endblock %}

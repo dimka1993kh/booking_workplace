@@ -1,0 +1,30 @@
+{% load static %}
+<!doctype html>
+
+<html>
+    <head>
+        <title>{% block title %}{% endblock%}</title>
+        <meta http-equiv="content-language" content="ru">
+        <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    </head>
+    <body>
+        <aside>
+            <h3>Навигация</h3>
+            <ul>
+                {% if user.is_authenticated %}
+                    <span>Пользователь: {{ user.username }}</span><br>
+                    <a href='{% url "account_logout"%}'><li>Выход</li></i></a>
+                {% else %}
+                    <a href='{% url "account_login"%}'><li>Вход</li></i></a>
+                    <a href='{% url "account_signup"%}'><li>Регистрация</li></i></a>
+                {% endif %}
+                <a href='{% url "all_booking" %}'><li>Просмотреть забронированые места</li></i></a>
+                <a href='{% url "home" %}'><li>На главную</li></i></a>
+            </ul>
+        </aside>
+        <main>
+            {% block content %}{% endblock%}
+        </main>
+    </body>
+    
+</html>
